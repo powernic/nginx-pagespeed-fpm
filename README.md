@@ -1,19 +1,10 @@
-# image-fuzzy-alpine-nginx-pagespeed
-
-Fuzzy as in reference to the https://en.wikipedia.org/wiki/The_Mythical_Man-Month book where Fred describes the approach of "write one to throw away" as the best start.
+# nginx-pagespeed-fpm
 
 Nginx compiled with PageSpeed optimisation library on Alpine Linux.
-
-Maintained by: Aleksi Johansson <aleksi.johansson@wunder.io>
+ 
 
 ## Docker
-
-### Image
-
-This image is available publicly at:
-
-- quay.io/wunder/fuzzy-alpine-nginx-pagespeed : [![Docker Repository on Quay](https://quay.io/repository/wunder/fuzzy-alpine-nginx-pagespeed/status "Docker Repository on Quay")](https://quay.io/repository/wunder/fuzzy-alpine-nginx-pagespeed)
-
+ 
 ### Base
 
 This image is based on the fuzzy-alpine-base image https://github.com/wunderkraut/image-fuzzy-alpine-base.
