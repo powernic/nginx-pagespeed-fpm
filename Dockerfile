@@ -258,7 +258,15 @@ RUN echo "cgi.fix_pathinfo=0" > ${php_vars} &&\
 #    ln -s /etc/php7/php.ini /etc/php7/conf.d/php.ini && \
 #    find /etc/php7/conf.d/ -name "*.ini" -exec sed -i -re 's/^(\s*)#(.*)/\1;\2/g' {} \;
 
+#redis install
+RUN curl -L -o /tmp/redis.tar.gz https://github.com/phpredis/phpredis/archive/php7.tar.gz \
+	&& tar xfz /tmp/redis.tar.gz \
+    && rm -r /tmp/redis.tar.gz \
+	&& mkdir -p /usr/src/php/ext \
+	&& mv phpredis-php7 /usr/src/php/ext/redis \
+	&& docker-php-ext-install redis
 
+	
 # Add Scripts
 ADD scripts/start.sh /start.sh
 ADD scripts/pull /usr/bin/pull
